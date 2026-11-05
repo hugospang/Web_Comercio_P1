@@ -170,15 +170,47 @@
             <h2>Novedades</h2>
         </section>
 
-        <section id="visitanos">
-            <h2>Horario y ubicación</h2>
-            <address>
+        <section id="visitanos" class="bg-tinta px-5 py-20 text-hueso transition-colors duration-300 md:px-10 md:py-28 dark:bg-violeta">
+    <div class="mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-2">
+        <div>
+            <p class="text-sm font-semibold tracking-widest text-lima uppercase">Visítanos</p>
+            <h2 class="mt-3 font-titulo text-4xl leading-tight font-extrabold tracking-tight md:text-6xl">Horario y ubicación</h2>
+
+            <address class="mt-8 text-lg not-italic">
                 C/ General Oráa, 24<br>
                 28006 Madrid<br>
-                <a href="tel:+34647568352">647 568 352</a>
+                <a href="tel:+34647568352" class="rounded-sm font-semibold text-lima underline-offset-4 hover:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-lima">647 568 352</a>
             </address>
-            <p>Horario por confirmar</p>
-        </section>
+
+            <dl class="mt-8 divide-y divide-hueso/20 border-y border-hueso/20">
+                <div class="flex justify-between gap-4 py-3">
+                    <dt>Lunes a viernes</dt>
+                    <dd class="text-right font-semibold">10:30–14:30 y 17:00–20:30</dd>
+                </div>
+                <div class="flex justify-between gap-4 py-3">
+                    <dt>Sábado</dt>
+                    <dd class="text-right font-semibold">10:30–14:30</dd>
+                </div>
+                <div class="flex justify-between gap-4 py-3">
+                    <dt>Domingo</dt>
+                    <dd class="text-right font-semibold text-lima">Cerrado</dd>
+                </div>
+            </dl>
+
+            <a href="https://www.google.com/maps/search/?api=1&amp;query=Librer%C3%ADa+P%C3%A9rgamo+General+Or%C3%A1a+24+Madrid" target="_blank" rel="noopener"
+               class="mt-10 inline-block rounded-full bg-lima px-8 py-3 font-semibold text-tinta transition-colors hover:bg-hueso focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-lima">
+                Cómo llegar
+            </a>
+        </div>
+
+        <figure>
+            <img src="img/interior.jpg" width="869" height="651" loading="lazy"
+                 alt="Interior de la librería Pérgamo: mesa de novedades y estanterías de madera llenas de libros"
+                 class="w-full rounded-3xl object-cover">
+            <figcaption class="mt-3 text-sm text-hueso/70">Interior de la librería.</figcaption>
+        </figure>
+    </div>
+</section>
     </main>
 
     <footer>
