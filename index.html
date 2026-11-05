@@ -1,97 +1,157 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Librería Pérgamo · Donde suceden las cosas</title>
-    <meta name="description" content="Librería de barrio en la calle General Oráa, 24, Madrid.">
+    <meta
+      name="description"
+      content="Librería de barrio en la calle General Oráa, 24, Madrid."
+    />
 
     <!-- Tipografías -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=Instrument+Sans:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- CSS de librerías (cuando elijamos cuál usar) -->
 
     <!-- Nuestro CSS propio -->
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/styles.css" />
 
     <!-- Tailwind desde el CDN -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
     <!-- Sistema de diseño -->
     <style type="text/tailwindcss">
-        /* Modo oscuro con la clase .dark en <html> */
-        @custom-variant dark (&:where(.dark, .dark *));
+      /* Modo oscuro con la clase .dark en <html> */
+      @custom-variant dark (&:where(.dark, .dark *));
 
-        @theme static {
-            --color-tinta: #16121f;
-            --color-hueso: #f5f3ee;
-            --color-violeta: #4b1fa8;
-            --color-lima: #d4f24a;
-            --color-suave: #5f5a6b;
-            --color-borde: #ddd8ce;
+      @theme static {
+        --color-tinta: #16121f;
+        --color-hueso: #f5f3ee;
+        --color-violeta: #4b1fa8;
+        --color-lima: #d4f24a;
+        --color-suave: #5f5a6b;
+        --color-borde: #ddd8ce;
 
-            --font-titulo: "Bricolage Grotesque", system-ui, sans-serif;
-            --font-texto: "Instrument Sans", system-ui, sans-serif;
-        }
+        --font-titulo: "Bricolage Grotesque", system-ui, sans-serif;
+        --font-texto: "Instrument Sans", system-ui, sans-serif;
+      }
     </style>
-</head>
-<body class="bg-hueso font-texto text-tinta antialiased">
+  </head>
+  <body class="bg-hueso font-texto text-tinta antialiased">
+    <header
+      class="sticky top-0 z-20 border-b border-borde bg-hueso transition-colors duration-300 dark:border-suave dark:bg-tinta"
+    >
+      <div
+        class="flex flex-wrap items-center justify-between gap-x-4 px-5 py-4 md:px-10"
+      >
+        <a
+          href="#inicio"
+          class="rounded-sm font-titulo text-2xl font-extrabold tracking-tight text-violeta focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-violeta dark:text-lima dark:focus-visible:outline-lima"
+          >Pérgamo</a
+        >
 
-    <header class="sticky top-0 z-20 border-b border-borde bg-hueso">
-        <div class="flex flex-wrap items-center justify-between gap-x-4 px-5 py-4 md:px-10">
-            <a href="#inicio" class="rounded-sm font-titulo text-2xl font-extrabold tracking-tight text-violeta focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-violeta">Pérgamo</a>
+        <div class="flex items-center gap-2 md:order-last">
+          <button
+            id="boton-tema"
+            type="button"
+            aria-pressed="false"
+            class="rounded-full border border-violeta px-4 py-2 text-sm font-semibold text-violeta hover:bg-violeta hover:text-hueso focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-violeta dark:border-lima dark:text-lima dark:hover:bg-lima dark:hover:text-tinta dark:focus-visible:outline-lima"
+          >
+            Modo oscuro
+          </button>
 
-            <button id="boton-menu" type="button" aria-expanded="false" aria-controls="menu"
-                    class="rounded-full bg-violeta px-4 py-2 text-sm font-semibold text-hueso hover:bg-tinta focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-violeta md:hidden">
-                Menú
-            </button>
-
-            <nav class="w-full md:w-auto" aria-label="Principal">
-                <ul id="menu" class="hidden space-y-1 pt-3 md:flex md:gap-8 md:space-y-0 md:pt-0">
-                    <li><a href="#inicio" class="enlace-menu block py-2">Inicio</a></li>
-                    <li><a href="#libros" class="enlace-menu block py-2">Libros</a></li>
-                    <li><a href="#novedades" class="enlace-menu block py-2">Novedades</a></li>
-                    <li><a href="#visitanos" class="enlace-menu block py-2">Visítanos</a></li>
-                </ul>
-            </nav>
+          <button
+            id="boton-menu"
+            type="button"
+            aria-expanded="false"
+            aria-controls="menu"
+            class="rounded-full bg-violeta px-4 py-2 text-sm font-semibold text-hueso hover:bg-tinta focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-violeta md:hidden dark:bg-lima dark:text-tinta dark:hover:bg-hueso dark:focus-visible:outline-lima"
+          >
+            Menú
+          </button>
         </div>
+
+        <nav class="w-full md:ml-auto md:w-auto" aria-label="Principal">
+          <ul
+            id="menu"
+            class="hidden space-y-1 pt-3 md:flex md:gap-8 md:space-y-0 md:pt-0"
+          >
+            <li><a href="#inicio" class="enlace-menu block py-2">Inicio</a></li>
+            <li><a href="#libros" class="enlace-menu block py-2">Libros</a></li>
+            <li>
+              <a href="#novedades" class="enlace-menu block py-2">Novedades</a>
+            </li>
+            <li>
+              <a href="#visitanos" class="enlace-menu block py-2">Visítanos</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </header>
 
     <main>
-        <section id="inicio" class="bg-violeta px-5 py-20 text-hueso md:px-10 md:py-32">
-            <h1 class="max-w-5xl font-titulo text-6xl leading-none font-extrabold tracking-tight md:text-8xl">
-                Donde suceden <span class="text-lima">las cosas</span>
-            </h1>
-        </section>
+      <section
+        id="inicio"
+        class="bg-violeta px-5 py-20 text-hueso transition-colors duration-300 md:px-10 md:py-32 dark:bg-tinta"
+      >
+        <p class="text-sm font-semibold tracking-widest text-lima uppercase">
+          Librería · General Oráa, 24 · Madrid
+        </p>
+        <h1
+          class="mt-5 max-w-5xl font-titulo text-6xl leading-none font-extrabold tracking-tight md:text-8xl lg:text-9xl"
+        >
+          Donde suceden <span class="block text-lima">las cosas</span>
+        </h1>
+        <p class="mt-6 max-w-xl text-lg md:text-xl">
+          Literatura, Historia y Ciencias Sociales en tu barrio. Y si no lo
+          tenemos, lo pedimos.
+        </p>
+        <div class="mt-10 flex flex-col gap-3 sm:flex-row">
+          <a
+            href="#novedades"
+            class="rounded-full bg-lima px-8 py-3 text-center font-semibold text-tinta transition-colors hover:bg-hueso focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-lima"
+            >Ver novedades</a
+          >
+          <a
+            href="#visitanos"
+            class="rounded-full border border-hueso px-8 py-3 text-center font-semibold transition-colors hover:bg-hueso hover:text-tinta focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-hueso"
+            >Prepara tu visita</a
+          >
+        </div>
+      </section>
 
-        <section id="libros">
-            <h2>Libros y servicios</h2>
-        </section>
+      <section id="libros">
+        <h2>Libros y servicios</h2>
+      </section>
 
-        <section id="novedades">
-            <h2>Novedades</h2>
-        </section>
+      <section id="novedades">
+        <h2>Novedades</h2>
+      </section>
 
-        <section id="visitanos">
-            <h2>Horario y ubicación</h2>
-            <address>
-                C/ General Oráa, 24<br>
-                28006 Madrid<br>
-                <a href="tel:+34647568352">647 568 352</a>
-            </address>
-            <p>Horario por confirmar</p>
-        </section>
+      <section id="visitanos">
+        <h2>Horario y ubicación</h2>
+        <address>
+          C/ General Oráa, 24<br />
+          28006 Madrid<br />
+          <a href="tel:+34647568352">647 568 352</a>
+        </address>
+        <p>Horario por confirmar</p>
+      </section>
     </main>
 
     <footer>
-        <p>Librería Pérgamo · Madrid</p>
+      <p>Librería Pérgamo · Madrid</p>
     </footer>
 
     <!-- JS de librerías (antes que el nuestro) -->
 
     <!-- Nuestro JavaScript -->
     <script src="js/interfaz.js"></script>
-</body>
+  </body>
 </html>
