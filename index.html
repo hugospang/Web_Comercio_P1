@@ -86,7 +86,33 @@
         <a href="#visitanos" class="rounded-full border border-hueso px-8 py-3 text-center font-semibold transition-colors hover:bg-hueso hover:text-tinta focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-hueso">Prepara tu visita</a>
     </div>
 </section>
-
+<!-- Cinta animada: lo que estamos leyendo -->
+<aside class="cinta overflow-hidden border-y-2 border-tinta bg-lima py-4 text-tinta">
+    <h2 class="sr-only">Lo que estamos leyendo</h2>
+    <div class="cinta-pista flex w-max">
+        <ul class="flex shrink-0 gap-8 pr-8 font-titulo text-xl font-extrabold tracking-tight uppercase md:text-2xl">
+            <li>El caso Cem</li>
+            <li>Diez versiones de Kafka</li>
+            <li>La pasión según G. H.</li>
+            <li>En diciembre llegaban las brisas</li>
+            <li>Heroínas</li>
+            <li>Besos, chao</li>
+            <li>Algo que nadie hizo</li>
+            <li>Al 2040</li>
+        </ul>
+        <!-- Copia para que la cinta no tenga cortes (los lectores de pantalla la ignoran) -->
+        <ul class="flex shrink-0 gap-8 pr-8 font-titulo text-xl font-extrabold tracking-tight uppercase md:text-2xl" aria-hidden="true">
+            <li>El caso Cem</li>
+            <li>Diez versiones de Kafka</li>
+            <li>La pasión según G. H.</li>
+            <li>En diciembre llegaban las brisas</li>
+            <li>Heroínas</li>
+            <li>Besos, chao</li>
+            <li>Algo que nadie hizo</li>
+            <li>Al 2040</li>
+        </ul>
+    </div>
+</aside>
         <section id="libros">
             <h2>Libros y servicios</h2>
         </section>
