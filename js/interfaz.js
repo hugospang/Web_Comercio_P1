@@ -1,6 +1,6 @@
 /* =========================================================
    interfaz.js · Librería Pérgamo
-   JavaScript nativo: menú móvil y modo claro/oscuro
+   JavaScript: menú móvil y modo claro/oscuro
    ========================================================= */
 
 // Menú móvil

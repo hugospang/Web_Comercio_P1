@@ -2,10 +2,10 @@
    Librería Pérgamo · CSS propio
    ========================================================= */
 
-/* Mismo orden de capas que Tailwind (siempre en la primera línea) */
+/* Mismo orden de capas que Tailwind */
 @layer theme, base, components, utilities;
 
-/* ---------- BASE: etiquetas y tema ---------- */
+/* ---------- BASE ---------- */
 @layer base {
   html {
     scroll-behavior: smooth;
@@ -17,9 +17,9 @@
   }
 }
 
-/* ---------- COMPONENTS: nuestras clases y animaciones ---------- */
+/* ---------- COMPONENTS ---------- */
 @layer components {
-  /* Enlaces del menú: subrayado que crece de izquierda a derecha */
+  /* Enlaces del menú */
   .enlace-menu {
     position: relative;
     width: fit-content;
