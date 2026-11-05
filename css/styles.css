@@ -1,0 +1,53 @@
+/* =========================================================
+   Librería Pérgamo · CSS propio
+   ========================================================= */
+
+/* Mismo orden de capas que Tailwind (siempre en la primera línea) */
+@layer theme, base, components, utilities;
+
+
+/* ---------- BASE: etiquetas y tema ---------- */
+@layer base {
+    html {
+        scroll-behavior: smooth;
+        scroll-padding-top: 5rem; /* para que la cabecera fija no tape los títulos */
+    }
+}
+
+
+/* ---------- COMPONENTS: nuestras clases y animaciones ---------- */
+@layer components {
+
+    /* Enlaces del menú: subrayado que crece de izquierda a derecha */
+    .enlace-menu {
+        position: relative;
+        width: fit-content;
+        font-weight: 500;
+    }
+    .enlace-menu::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0.25rem;
+        width: 100%;
+        height: 2px;
+        background: var(--color-violeta);
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 0.3s ease;
+    }
+    .enlace-menu:hover::after,
+    .enlace-menu:focus-visible::after {
+        transform: scaleX(1);
+    }
+    .enlace-menu:focus-visible {
+        outline: 2px solid var(--color-violeta);
+        outline-offset: 2px;
+    }
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .enlace-menu::after { transition: none; }
+}
