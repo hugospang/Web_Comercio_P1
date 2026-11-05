@@ -1,7 +1,5 @@
-/* =========================================================
-   interfaz.js · Librería Pérgamo
-   JavaScript: menú móvil y modo claro/oscuro
-   ========================================================= */
+/*interfaz.js · Librería Pérgamo
+   JavaScript: menú móvil y modo claro/oscuro*/
 
 // Menú móvil
 const botonMenu = document.querySelector("#boton-menu");

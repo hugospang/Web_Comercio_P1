@@ -1,6 +1,4 @@
-/* =========================================================
-   Librería Pérgamo · CSS propio
-   ========================================================= */
+/*Librería Pérgamo · CSS propio*/
 
 /* Mismo orden de capas que Tailwind */
 @layer theme, base, components, utilities;
@@ -61,6 +59,37 @@
     content: "✦";
     font-size: 0.75em;
   }
+  /* Portada tipográfica: línea vertical que imita el lomo del libro */
+.portada {
+    position: relative;
+    box-shadow: 0 20px 30px -20px rgb(22 18 31 / 0.5);
+}
+.portada::before {
+    content: "";
+    position: absolute;
+    inset-block: 0;
+    left: 1rem;
+    width: 2px;
+    background: currentColor;
+    opacity: 0.3;
+}
+
+/* Swiper: colores de la paginación con nuestra paleta */
+.novedades {
+    --swiper-theme-color: var(--color-violeta);
+    --swiper-pagination-bullet-inactive-color: var(--color-suave);
+}
+.dark .novedades {
+    --swiper-theme-color: var(--color-lima);
+    --swiper-pagination-bullet-inactive-color: var(--color-borde);
+}
+
+/* Flechas desactivadas al llegar al principio o al final */
+.swiper-button-disabled {
+    opacity: 0.35;
+    cursor: default;
+    pointer-events: none;
+}
   /* En modo oscuro, el subrayado y el foco pasan a lima */
   .dark .enlace-menu::after {
     background: var(--color-lima);
@@ -69,9 +98,21 @@
     outline-color: var(--color-lima);
   }
 }
-/* ---------- ANIMACIONES ---------- */
 
-/* Mueve la cinta la mitad de su ancho: justo lo que mide una copia */
+/*AJUSTES DE LIBRERÍAS*/
+
+.novedades .swiper-slide {
+    height: auto;
+}
+
+/* Paginación debajo del slider, no encima de los libros */
+.novedades .swiper-pagination {
+    position: static;
+    margin-top: 2rem;
+}
+/* ---------- ANIMACIONES ----------*/
+
+/* Mueve la cinta la mitad de su ancho*/
 @keyframes desplazar-cinta {
   from {
     transform: translateX(0);
