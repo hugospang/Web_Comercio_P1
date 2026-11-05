@@ -60,11 +60,11 @@
     font-size: 0.75em;
   }
   /* Portada tipográfica: línea vertical que imita el lomo del libro */
-.portada {
+  .portada {
     position: relative;
     box-shadow: 0 20px 30px -20px rgb(22 18 31 / 0.5);
-}
-.portada::before {
+  }
+  .portada::before {
     content: "";
     position: absolute;
     inset-block: 0;
@@ -72,24 +72,29 @@
     width: 2px;
     background: currentColor;
     opacity: 0.3;
-}
-
-/* Swiper: colores de la paginación con nuestra paleta */
-.novedades {
+  }
+  /* Sello "Desde 1946": se balancea como una etiqueta colgada */
+  .sello {
+    rotate: -12deg;
+    animation: balancear-sello 2s ease-in-out infinite;
+    box-shadow: 0 12px 24px -12px rgb(22 18 31 / 0.6);
+  }
+  /* Swiper: colores de la paginación con nuestra paleta */
+  .novedades {
     --swiper-theme-color: var(--color-violeta);
     --swiper-pagination-bullet-inactive-color: var(--color-suave);
-}
-.dark .novedades {
+  }
+  .dark .novedades {
     --swiper-theme-color: var(--color-lima);
     --swiper-pagination-bullet-inactive-color: var(--color-borde);
-}
+  }
 
-/* Flechas desactivadas al llegar al principio o al final */
-.swiper-button-disabled {
+  /* Flechas desactivadas al llegar al principio o al final */
+  .swiper-button-disabled {
     opacity: 0.35;
     cursor: default;
     pointer-events: none;
-}
+  }
   /* En modo oscuro, el subrayado y el foco pasan a lima */
   .dark .enlace-menu::after {
     background: var(--color-lima);
@@ -102,13 +107,13 @@
 /*AJUSTES DE LIBRERÍAS*/
 
 .novedades .swiper-slide {
-    height: auto;
+  height: auto;
 }
 
 /* Paginación debajo del slider, no encima de los libros */
 .novedades .swiper-pagination {
-    position: static;
-    margin-top: 2rem;
+  position: static;
+  margin-top: 2rem;
 }
 /* ---------- ANIMACIONES ----------*/
 
@@ -121,6 +126,16 @@
     transform: translateX(-50%);
   }
 }
+/* Balanceo suave del sello */
+@keyframes balancear-sello {
+  0%,
+  100% {
+    rotate: -12deg;
+  }
+  50% {
+    rotate: -4deg;
+  }
+}
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
@@ -129,6 +144,9 @@
     transition: none;
   }
   .cinta-pista {
+    animation: none;
+  }
+  .sello {
     animation: none;
   }
 }
