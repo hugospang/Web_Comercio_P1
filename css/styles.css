@@ -45,6 +45,22 @@
     outline: 2px solid var(--color-violeta);
     outline-offset: 2px;
   }
+  /* Cinta de texto: se desplaza sin fin y se para al pasar el ratón */
+  .cinta-pista {
+    animation: desplazar-cinta 35s linear infinite;
+  }
+  .cinta:hover .cinta-pista {
+    animation-play-state: paused;
+  }
+  .cinta li {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+  .cinta li::after {
+    content: "✦";
+    font-size: 0.75em;
+  }
   /* En modo oscuro, el subrayado y el foco pasan a lima */
   .dark .enlace-menu::after {
     background: var(--color-lima);
@@ -53,12 +69,25 @@
     outline-color: var(--color-lima);
   }
 }
+/* ---------- ANIMACIONES ---------- */
 
+/* Mueve la cinta la mitad de su ancho: justo lo que mide una copia */
+@keyframes desplazar-cinta {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
   }
   .enlace-menu::after {
     transition: none;
+  }
+  .cinta-pista {
+    animation: none;
   }
 }
