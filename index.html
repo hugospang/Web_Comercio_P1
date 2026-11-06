@@ -64,20 +64,20 @@
       class="sticky top-0 z-20 border-b border-borde bg-hueso transition-colors duration-300 dark:border-suave dark:bg-tinta"
     >
       <div
-        class="flex flex-wrap items-center justify-between gap-x-4 px-5 py-4 md:px-10"
+        class="flex flex-wrap items-center justify-between gap-x-3 px-4 py-4 sm:gap-x-4 sm:px-5 md:px-10"
       >
         <a
           href="#inicio"
-          class="rounded-sm font-titulo text-2xl font-extrabold tracking-tight text-violeta focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-violeta dark:text-lima dark:focus-visible:outline-lima"
+          class="rounded-sm font-titulo text-xl font-extrabold tracking-tight text-violeta focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-violeta sm:text-2xl dark:text-lima dark:focus-visible:outline-lima"
           >Pérgamo</a
         >
 
-        <div class="flex items-center gap-2 md:order-last">
+        <div class="flex items-center gap-1.5 sm:gap-2 md:order-last">
           <button
             id="boton-tema"
             type="button"
             aria-pressed="false"
-            class="rounded-full border border-violeta px-4 py-2 text-sm font-semibold text-violeta hover:bg-violeta hover:text-hueso focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-violeta dark:border-lima dark:text-lima dark:hover:bg-lima dark:hover:text-tinta dark:focus-visible:outline-lima"
+            class="rounded-full border border-violeta px-3 py-2 text-sm font-semibold text-violeta hover:bg-violeta hover:text-hueso focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-violeta sm:px-4 dark:border-lima dark:text-lima dark:hover:bg-lima dark:hover:text-tinta dark:focus-visible:outline-lima"
           >
             Modo oscuro
           </button>
@@ -87,7 +87,7 @@
             type="button"
             aria-expanded="false"
             aria-controls="menu"
-            class="rounded-full bg-violeta px-4 py-2 text-sm font-semibold text-hueso hover:bg-tinta focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-violeta md:hidden dark:bg-lima dark:text-tinta dark:hover:bg-hueso dark:focus-visible:outline-lima"
+            class="rounded-full bg-violeta px-3 py-2 text-sm font-semibold text-hueso hover:bg-tinta focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-violeta sm:px-4 md:hidden dark:bg-lima dark:text-tinta dark:hover:bg-hueso dark:focus-visible:outline-lima"
           >
             Menú
           </button>
@@ -96,7 +96,7 @@
         <nav class="w-full md:ml-auto md:w-auto" aria-label="Principal">
           <ul
             id="menu"
-            class="hidden space-y-1 pt-3 md:flex md:gap-8 md:space-y-0 md:pt-0"
+            class="hidden space-y-1 pt-3 md:flex md:gap-5 md:space-y-0 md:pt-0 lg:gap-8"
           >
             <li><a href="#inicio" class="enlace-menu block py-2">Inicio</a></li>
             <li><a href="#libros" class="enlace-menu block py-2">Libros</a></li>
@@ -117,9 +117,9 @@
     <main>
       <section
         id="inicio"
-        class="relative isolate overflow-hidden bg-violeta px-5 py-20 text-hueso transition-colors duration-300 md:px-10 md:py-32 dark:bg-tinta"
+        class="relative isolate flex min-h-[calc(100svh-4.5rem)] items-center overflow-hidden bg-violeta px-5 py-12 text-hueso transition-colors duration-300 md:px-10 md:py-16 dark:bg-tinta"
       >
-        <!-- Foto de fondo -->
+        <!-- Foto de fondo: grande, con poca opacidad y teñida del color de la sección -->
         <img
           src="img/libreria/pergamo.jpeg"
           width="480"
@@ -127,26 +127,26 @@
           alt=""
           class="absolute inset-0 -z-10 size-full object-cover object-top opacity-30 mix-blend-luminosity"
         />
-        <!-- Degradado -->
+        <!-- Degradado: más color a la izquierda para que el texto se lea bien -->
         <div
           class="absolute inset-0 -z-10 bg-linear-to-r from-violeta via-violeta/60 to-transparent dark:from-tinta dark:via-tinta/60"
           aria-hidden="true"
         ></div>
 
-        <div class="mx-auto max-w-7xl">
+        <div class="mx-auto w-full max-w-7xl">
           <p class="text-sm font-semibold tracking-widest text-lima uppercase">
             Librería · General Oráa, 24 · Madrid
           </p>
           <h1
-            class="mt-5 max-w-5xl font-titulo text-6xl leading-none font-extrabold tracking-tight md:text-8xl lg:text-9xl"
+            class="mt-4 max-w-5xl font-titulo text-5xl leading-none font-extrabold tracking-tight sm:text-6xl md:text-7xl lg:text-8xl"
           >
             Donde suceden <span class="block text-lima">las cosas</span>
           </h1>
-          <p class="mt-6 max-w-xl text-lg md:text-xl">
+          <p class="mt-5 max-w-xl sm:text-lg md:text-xl">
             Literatura, Historia y Ciencias Sociales en tu barrio. Y si no lo
             tenemos, lo pedimos.
           </p>
-          <div class="mt-10 flex flex-col gap-3 sm:flex-row">
+          <div class="mt-6 flex flex-col gap-3 sm:mt-8 sm:flex-row">
             <a
               href="#novedades"
               class="rounded-full bg-lima px-8 py-3 text-center font-semibold text-tinta transition-colors hover:bg-hueso focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-lima"
