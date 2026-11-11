@@ -19,7 +19,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=Instrument+Sans:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=Instrument+Sans:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Courier+Prime&display=swap"
       rel="stylesheet"
     />
 
@@ -56,6 +56,7 @@
         --font-titulo: "Bricolage Grotesque", system-ui, sans-serif;
         --font-texto: "Instrument Sans", system-ui, sans-serif;
         --font-clasica: "Cormorant Garamond", Georgia, serif;
+        --font-maquina: "Courier Prime", "Courier New", monospace;
       }
     </style>
   </head>
@@ -571,9 +572,36 @@
               >
             </h2>
             <p class="capitular mt-6 max-w-xl text-lg">
-              Pérgamo abrió sus puertas en 1946 de la mano de Raúl Serrano.
-              Después la llevaron sus hijas, Lourdes y Ana, y hoy sigue siendo
-              el lugar donde varias generaciones de vecinos aprendieron a leer.
+              Pérgamo es una de las librerías con más historia de Madrid:
+              varias generaciones de vecinos aprendieron a leer entre sus
+              estanterías de madera.
+            </p>
+
+            <!-- Línea temporal -->
+            <ol class="linea-tiempo mt-8 max-w-xl space-y-5 border-l-2 border-oro/50 pl-6">
+              <li>
+                <p class="font-clasica text-2xl font-semibold text-oro italic">1946</p>
+                <p>Raúl Serrano funda la librería Pérgamo.</p>
+              </li>
+              <li>
+                <p class="font-clasica text-2xl font-semibold text-oro italic">Siglo XXI</p>
+                <p>Sus hijas, Lourdes y Ana, toman el relevo.</p>
+              </li>
+              <li>
+                <p class="font-clasica text-2xl font-semibold text-oro italic">Hoy</p>
+                <p>
+                  Un nuevo equipo de libreros mantiene viva la librería, con
+                  presentaciones, conferencias y tertulias para unas 30 personas.
+                </p>
+              </li>
+            </ol>
+
+            <!-- Nota escrita a máquina: se teclea al aparecer en pantalla -->
+            <p
+              class="maquina mt-8 inline-block -rotate-1 bg-hueso px-4 py-3 text-sm text-tinta shadow-lg sm:px-5 sm:text-lg"
+              data-aos="fade"
+            >
+              <span class="maquina-texto">Si no lo tenemos, lo pedimos.</span>
             </p>
             <p class="mt-4 max-w-xl text-lg">
               Entre sus estanterías de madera caben hasta 30 personas para
@@ -616,7 +644,7 @@
               height="1066"
               loading="lazy"
               alt="Dos personas junto a una mesa llena de libros, delante de estanterías de madera y una escalera"
-              class="w-full rounded-3xl object-cover"
+              class="w-full rounded-3xl object-cover sepia transition duration-700 hover:sepia-0"
             />
             <img
               src="img/libreria/estanterias.webp"
@@ -624,7 +652,7 @@
               height="1069"
               loading="lazy"
               alt="Dos personas sonrientes posan junto a las estanterías de la librería"
-              class="-mt-16 ml-auto w-3/4 rounded-3xl border-4 border-violeta object-cover md:-mt-24 dark:border-tinta"
+              class="-mt-16 ml-auto w-3/4 rounded-3xl border-4 border-violeta object-cover sepia transition duration-700 hover:sepia-0 md:-mt-24 dark:border-tinta"
             />
             <p
               class="sello absolute -top-6 -left-2 flex size-28 flex-col items-center justify-center rounded-full bg-hueso text-center font-clasica leading-none text-violeta md:size-32"
@@ -696,7 +724,7 @@
               height="651"
               loading="lazy"
               alt="Interior de la librería Pérgamo: mesa de novedades y estanterías de madera llenas de libros"
-              class="w-full rounded-3xl object-cover"
+              class="w-full rounded-3xl object-cover sepia transition duration-700 hover:sepia-0"
             />
             <figcaption class="mt-3 text-sm text-hueso/70">
               Interior de la librería.

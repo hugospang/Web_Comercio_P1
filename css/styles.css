@@ -106,6 +106,38 @@
     border-block: 1px solid currentColor;
     opacity: 0.45;
   }
+  /* Línea temporal: un punto dorado sobre la línea de cada fecha */
+  .linea-tiempo li {
+    position: relative;
+  }
+  .linea-tiempo li::before {
+    content: "";
+    position: absolute;
+    top: 0.65rem;
+    left: calc(-1.5rem - 7px); / centrado sobre el borde izquierdo del <ol> /
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--color-oro);
+  }
+  /* Nota escrita a máquina: el texto se descubre letra a letra (steps)
+     cuando AOS le pone la clase .aos-animate al aparecer en pantalla */
+  .maquina {
+    font-family: var(--font-maquina);
+  }
+  .maquina-texto {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    vertical-align: bottom;
+    border-right: 0.12em solid currentColor;
+  }
+  .maquina.aos-animate .maquina-texto {
+    width: 0;
+    animation:
+      escribir 2.4s steps(30) 0.4s forwards,
+      parpadear 0.8s step-end infinite;
+  }
   /* Letra capitular: la primera letra grande, como en los libros antiguos */
   .capitular::first-letter {
     float: left;
@@ -174,6 +206,21 @@
     transform: translateX(-50%);
   }
 }
+
+/* Máquina de escribir: el ancho crece letra a letra hasta las 29 de la frase
+   (30ch deja un hueco para el cursor y no recorta el punto final) */
+@keyframes escribir {
+  to {
+    width: 30ch;
+  }
+}
+
+/ Cursor que parpadea */
+@keyframes parpadear {
+  50% {
+    border-color: transparent;
+  }
+}
 /* Balanceo suave del sello */
 @keyframes balancear-sello {
   0%,
@@ -195,6 +242,11 @@
     animation: none;
   }
   .sello {
+    animation: none;
+  }
+
+  .maquina.aos-animate .maquina-texto {
+    width: auto;
     animation: none;
   }
 }
