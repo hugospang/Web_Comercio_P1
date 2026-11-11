@@ -19,7 +19,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=Instrument+Sans:wght@400;500;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=Instrument+Sans:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&display=swap"
       rel="stylesheet"
     />
 
@@ -51,9 +51,11 @@
         --color-lima: #d4f24a;
         --color-suave: #5f5a6b;
         --color-borde: #ddd8ce;
+        --color-oro: #c9a45c;
 
         --font-titulo: "Bricolage Grotesque", system-ui, sans-serif;
         --font-texto: "Instrument Sans", system-ui, sans-serif;
+        --font-clasica: "Cormorant Garamond", Georgia, serif;
       }
     </style>
   </head>
@@ -134,8 +136,10 @@
         ></div>
 
         <div class="mx-auto w-full max-w-7xl">
-          <p class="text-sm font-semibold tracking-widest text-lima uppercase">
-            Librería  General Oráa, 24  Madrid
+          <p
+            class="font-clasica text-xl font-semibold text-oro italic md:text-2xl"
+          >
+            Librería General Oráa, 24 Madrid
           </p>
           <h1
             class="mt-4 max-w-5xl font-titulo text-5xl leading-none font-extrabold tracking-tight sm:text-6xl md:text-7xl lg:text-8xl"
@@ -197,7 +201,7 @@
       <section id="libros" class="px-5 py-20 md:px-10 md:py-28">
         <div class="mx-auto max-w-7xl">
           <p
-            class="text-sm font-semibold tracking-widest text-violeta uppercase dark:text-lima"
+            class="font-clasica text-xl font-semibold text-violeta italic md:text-2xl dark:text-lima"
           >
             Qué encontrarás
           </p>
@@ -221,7 +225,7 @@
               class="group rounded-3xl border-2 border-tinta p-6 transition duration-300 hover:bg-violeta hover:text-hueso motion-safe:hover:-translate-y-1 dark:border-borde dark:hover:bg-lima dark:hover:text-tinta"
             >
               <p
-                class="font-titulo text-5xl font-extrabold text-violeta transition-colors group-hover:text-lima dark:text-lima dark:group-hover:text-violeta"
+                class="font-clasica text-6xl font-semibold text-violeta italic transition-colors group-hover:text-lima dark:text-lima dark:group-hover:text-violeta"
               >
                 01
               </p>
@@ -238,7 +242,7 @@
               class="group rounded-3xl border-2 border-tinta p-6 transition duration-300 hover:bg-violeta hover:text-hueso motion-safe:hover:-translate-y-1 dark:border-borde dark:hover:bg-lima dark:hover:text-tinta"
             >
               <p
-                class="font-titulo text-5xl font-extrabold text-violeta transition-colors group-hover:text-lima dark:text-lima dark:group-hover:text-violeta"
+                class="font-clasica text-6xl font-semibold text-violeta italic transition-colors group-hover:text-lima dark:text-lima dark:group-hover:text-violeta"
               >
                 02
               </p>
@@ -256,7 +260,7 @@
               class="group rounded-3xl border-2 border-tinta p-6 transition duration-300 hover:bg-violeta hover:text-hueso motion-safe:hover:-translate-y-1 dark:border-borde dark:hover:bg-lima dark:hover:text-tinta"
             >
               <p
-                class="font-titulo text-5xl font-extrabold text-violeta transition-colors group-hover:text-lima dark:text-lima dark:group-hover:text-violeta"
+                class="font-clasica text-6xl font-semibold text-violeta italic transition-colors group-hover:text-lima dark:text-lima dark:group-hover:text-violeta"
               >
                 03
               </p>
@@ -272,7 +276,7 @@
               class="group rounded-3xl border-2 border-tinta p-6 transition duration-300 hover:bg-violeta hover:text-hueso motion-safe:hover:-translate-y-1 dark:border-borde dark:hover:bg-lima dark:hover:text-tinta"
             >
               <p
-                class="font-titulo text-5xl font-extrabold text-violeta transition-colors group-hover:text-lima dark:text-lima dark:group-hover:text-violeta"
+                class="font-clasica text-6xl font-semibold text-violeta italic transition-colors group-hover:text-lima dark:text-lima dark:group-hover:text-violeta"
               >
                 04
               </p>
@@ -328,7 +332,7 @@
           <div class="flex items-end justify-between gap-6" data-aos="fade-up">
             <div>
               <p
-                class="text-sm font-semibold tracking-widest text-violeta uppercase dark:text-lima"
+                class="font-clasica text-xl font-semibold text-violeta italic md:text-2xl dark:text-lima"
               >
                 Recién llegados
               </p>
@@ -538,16 +542,19 @@
         <div class="mx-auto grid max-w-7xl items-center gap-16 lg:grid-cols-2">
           <div data-aos="fade-up">
             <p
-              class="text-sm font-semibold tracking-widest text-lima uppercase"
+              class="font-clasica text-xl font-semibold text-oro italic md:text-2xl"
             >
               Nuestra historia
             </p>
             <h2
               class="mt-3 font-titulo text-4xl leading-tight font-extrabold tracking-tight md:text-6xl"
             >
-              Pasando páginas desde 1946
+              Pasando páginas
+              <span class="font-clasica font-semibold text-oro italic"
+                >desde 1946</span
+              >
             </h2>
-            <p class="mt-6 max-w-xl text-lg">
+            <p class="capitular mt-6 max-w-xl text-lg">
               Pérgamo abrió sus puertas en 1946 de la mano de Raúl Serrano.
               Después la llevaron sus hijas, Lourdes y Ana, y hoy sigue siendo
               el lugar donde varias generaciones de vecinos aprendieron a leer.
@@ -619,7 +626,7 @@
         <div class="mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-2">
           <div data-aos="fade-up">
             <p
-              class="text-sm font-semibold tracking-widest text-lima uppercase"
+              class="font-clasica text-xl font-semibold text-oro italic md:text-2xl"
             >
               Visítanos
             </p>

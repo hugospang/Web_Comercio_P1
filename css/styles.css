@@ -73,6 +73,16 @@
     background: currentColor;
     opacity: 0.3;
   }
+  /* Letra capitular: la primera letra grande, como en los libros antiguos */
+  .capitular::first-letter {
+    float: left;
+    margin: 0.35rem 0.6rem 0 0;
+    font-family: var(--font-clasica);
+    font-size: 4.2em;
+    font-weight: 600;
+    line-height: 0.75;
+    color: var(--color-oro);
+  }
   /* Sello "Desde 1946": se balancea como una etiqueta colgada */
   .sello {
     rotate: -12deg;
