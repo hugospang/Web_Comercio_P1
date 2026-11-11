@@ -215,7 +215,7 @@
   }
 }
 
-/ Cursor que parpadea */
+/* Cursor que parpadea */
 @keyframes parpadear {
   50% {
     border-color: transparent;
