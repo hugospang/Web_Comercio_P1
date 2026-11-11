@@ -73,6 +73,13 @@
     background: currentColor;
     opacity: 0.3;
   }
+  /* Logo original de Pérgamo usado como máscara:
+     la forma sale del PNG y el color, de "color" (text-violeta, dark:text-lima...) */
+  .logo {
+    background-color: currentColor;
+    -webkit-mask: url("../img/logo.png") no-repeat center / contain;
+    mask: url("../img/logo.png") no-repeat center / contain;
+  }
   /* Letra capitular: la primera letra grande, como en los libros antiguos */
   .capitular::first-letter {
     float: left;
