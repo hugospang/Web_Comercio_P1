@@ -295,11 +295,16 @@
             </article>
           </div>
 
-          <!-- Servicios -->
+          <!-- Separador con florón -->
           <div
-            class="mt-16 grid gap-8 border-t-2 border-tinta pt-10 md:grid-cols-3 dark:border-borde"
-            data-aos="fade-up"
+            class="separador mt-16 text-violeta dark:text-lima"
+            aria-hidden="true"
           >
+            ❦
+          </div>
+
+          <!-- Servicios -->
+          <div class="mt-10 grid gap-8 md:grid-cols-3" data-aos="fade-up">
             <div>
               <h3 class="font-titulo text-xl font-extrabold">
                 Si no lo tenemos, lo pedimos
@@ -330,10 +335,15 @@
         </div>
       </section>
 
-      <section
-        id="novedades"
-        class="border-t-2 border-tinta py-20 md:py-28 dark:border-borde"
+      <!-- Separador con florón entre Libros y Novedades -->
+      <div
+        class="separador mx-auto max-w-7xl px-5 text-violeta md:px-10 dark:text-lima"
+        aria-hidden="true"
       >
+        ❦
+      </div>
+
+      <section id="novedades" class="py-20 md:py-28">
         <div class="mx-auto max-w-7xl px-5 md:px-10">
           <div class="flex items-end justify-between gap-6" data-aos="fade-up">
             <div>
@@ -617,10 +627,10 @@
               class="-mt-16 ml-auto w-3/4 rounded-3xl border-4 border-violeta object-cover md:-mt-24 dark:border-tinta"
             />
             <p
-              class="sello absolute -top-6 -left-2 flex size-28 items-center justify-center rounded-full bg-lima text-center font-titulo text-lg leading-tight font-extrabold text-tinta md:size-32 md:text-xl"
+              class="sello absolute -top-6 -left-2 flex size-28 flex-col items-center justify-center rounded-full bg-hueso text-center font-clasica leading-none text-violeta md:size-32"
               aria-hidden="true"
             >
-              Desde<br />1946
+              <span class="text-3xl font-semibold md:text-4xl">1946</span>
             </p>
           </figure>
         </div>
@@ -772,7 +782,7 @@
           class="mt-16 flex flex-col gap-4 border-t-2 border-tinta pt-6 text-sm sm:flex-row sm:items-center sm:justify-between"
         >
           <p>
-            © 2026 Librería Pérgamo  Maquetación Web con Hojas de Estilo 
+            © 2026 Librería Pérgamo Maquetación Web con Hojas de Estilo
             Spangenberg &amp; Cancho
           </p>
           <a
