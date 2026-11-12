@@ -308,9 +308,7 @@
 
         <div class="mx-auto max-w-7xl">
           <!-- Servicios -->
-          <div
-            class="mt-10 grid gap-8 md:grid-cols-3"
-            data-aos="fade-up">
+          <div class="mt-10 grid gap-8 md:grid-cols-3" data-aos="fade-up">
             <div>
               <h3 class="font-titulo text-xl font-extrabold">
                 Si no lo tenemos, lo pedimos
@@ -342,11 +340,7 @@
       </section>
 
       <!-- Separador con florón entre Libros y Novedades -->
-      <div
-        class="separador text-violeta dark:text-lima"
-      >
-        ❦
-      </div>
+      <div class="separador text-violeta dark:text-lima">❦</div>
 
       <section id="novedades" class="py-20 md:py-28">
         <div class="mx-auto max-w-7xl px-5 md:px-10">
@@ -409,7 +403,12 @@
                   />
                 </div>
                 <h3 class="mt-5 font-titulo text-xl font-extrabold">
-                  Diez versiones de Kafka
+                  <!-- El ::after del enlace cubre toda la tarjeta: se puede pulsar en cualquier punto -->
+                  <a
+                    href="ficha_producto.html"
+                    class="rounded-sm underline-offset-4 after:absolute after:inset-0 hover:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-violeta dark:focus-visible:outline-lima"
+                    >Diez versiones de Kafka</a
+                  >
                 </h3>
                 <p class="mt-1 text-suave dark:text-borde">
                   Maia Hruska , Anagrama
